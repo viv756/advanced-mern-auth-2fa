@@ -25,7 +25,7 @@ app.get(
   "/",
   asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     res.status(HTTPSTATUS.OK).json({
-      message: "Hello",
+      message: "Testing.....",
     });
   })
 );
