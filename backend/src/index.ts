@@ -7,6 +7,7 @@ import connectDatabase from "./database/database";
 import { errorHandler } from "./middlewares/errorhandler";
 import { HTTPSTATUS } from "./config/http.config";
 import { asyncHandler } from "./middlewares/asyncHandler";
+import { BadRequestException } from "./common/utils/catch-error";
 
 const app = express();
 const BASE_PATH = config.BASE_PATH;
