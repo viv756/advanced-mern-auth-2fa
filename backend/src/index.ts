@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import express, { Request, Response } from "express";
 import cors from "cors";
 import { config } from "./config/app.config";
+import connectDatabase from "./database/database";
 
 const app = express();
 const BASE_PATH = config.BASE_PATH;
@@ -23,6 +24,7 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
-app.listen(config.PORT, () => {
+app.listen(config.PORT, async () => {
   console.log("server is running", config.PORT);
+  await connectDatabase();
 });
