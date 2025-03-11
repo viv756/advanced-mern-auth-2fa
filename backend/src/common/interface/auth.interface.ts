@@ -5,3 +5,9 @@ export interface RegisterData {
   confirmPassword: string;
   userAgent?: string;
 }
+
+export interface LoginData {
+  email: string;
+  password: string;
+  userAgent?: string;
+}
